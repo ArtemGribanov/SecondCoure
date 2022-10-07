@@ -3,10 +3,10 @@
 #include <windows.h>
 using namespace std;
 
-string to2(float a); //lab1
+string to2(float a); 
 float from2(string a);
 
-string to10bi(float a); //lab2
+string to10bi(float a); 
 int from10bi(string str);
 int* toASCII(string str);
 string fromASCII(int a[200]);
@@ -18,16 +18,16 @@ string toBiTen(int a);
 int fromBiTen(string str);
 
 struct normalNumber {
-	float number;
+	double number;
 	int step;
 };
-normalNumber toNN(int a);
+normalNumber toNN(double a);
 normalNumber plusNN(normalNumber a, normalNumber b);
 normalNumber minusNN(normalNumber a, normalNumber b);
 normalNumber xNN(normalNumber a, normalNumber b);
 normalNumber divNN(normalNumber a, normalNumber b);
 
-string reverse(string a); //help
+string reverse(string a); //perevorot
 long long StringToInt(string str);
 string IntToString(long long a);
 void module();
@@ -39,7 +39,6 @@ int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-
 	module();
 }
 
@@ -48,36 +47,34 @@ void module()
 	while (1)
 	{
 		cout << "--------------------------" << endl;
-		cout << "0 - перевод из двоичной-десятичной " << endl;
-		cout << "1 - перевод в двоично-десятичную" << endl;
-		cout << "2 - операции над 2" << endl;
-		cout << "3 - ASCII" << endl;
-		cout << "4 - Прямой, обратный, дополнительный код " << endl;
-		cout << "5 - Операции над числами с плавающей точкой" << endl;
+		cout << "1 - перевод из двоичной-десятичной " << endl;
+		cout << "2 - перевод в двоично-десятичную" << endl;
+		cout << "3 - операции над 2" << endl;
+		cout << "4 - ASCII" << endl;
+		cout << "5 - Прямой, обратный, дополнительный код " << endl;
+		cout << "6 - Операции над числами с плавающей точкой" << endl;
 
 		float to_number;
 		string from_number;
 		int choice = 0; cin >> choice;
 		int sschoice;
-		int first_number, second_number;
+		double first_number, second_number;
 		string first_str_number, second_str_number;
 		switch (choice)
 		{
-		case 0: // перевод из
+		case 1: 
 			cout << "Введите число: "; cin >> from_number;
 			cout << fromBiTen(from_number);
 			break;
-			//////////////////////
-		case 1:
+		case 2:
 			cout << "Введите число: "; cin >> to_number;
 			cout << toBiTen(to_number);
 			break;
-			////////////////////////
-		case 2:
+		case 3:
 			cout << "1 - Обратное сложение, 2 - Дополнительное сложение: "; cin >> sschoice;
 			cout << "Введите первое число: "; cin >> first_number;
 			cout << "Введите второе число: "; cin >> second_number;
-			switch (sschoice) //операции над 2 
+			switch (sschoice) 
 			{
 			case 1:
 				cout << reverseplus(to10bi(first_number), to10bi(second_number)) << endl;
@@ -89,9 +86,9 @@ void module()
 				break;
 			}
 			break;
-		case 3:
+		case 4:
 			cout << "1 - В аски код, 2 - Из аски кода: "; cin >> sschoice;
-			switch (sschoice) //операции над 2 
+			switch (sschoice) 
 			{
 			case 1:
 				toASCII("Дешифруйте данный текст, используя таблицу ASCII-кодов");
@@ -102,13 +99,13 @@ void module()
 				break;
 			}
 			break;
-		case 4:
+		case 5:
 			cout << "Введите число: "; cin >> first_number;
 			cout << "Прямой код: " << to10bi(first_number) << endl;
 			cout << "Обратный код: " << reverseCode(to10bi(first_number)) << endl;
 			cout << "Дополнительный код: " << dopCode(to10bi(first_number)) << endl;
 			break;
-		case 5:
+		case 6:
 			normalNumber a, b;
 			cout << "1 - Сложение " << endl;
 			cout << "2 - Вычитание " << endl;
@@ -118,7 +115,7 @@ void module()
 
 			cout << "Введите первое число: "; cin >> first_number; a = toNN(first_number);
 			cout << "Введите второе число: "; cin >> second_number; b = toNN(second_number);
-			switch (sschoice) //операции над 2 
+			switch (sschoice) 
 			{
 			case 1:
 				a = plusNN(a, b);
@@ -171,16 +168,24 @@ normalNumber plusNN(normalNumber a, normalNumber b)
 	Summa = toNN(Summa.number);
 	return Summa;
 }
-normalNumber toNN(int a)
+normalNumber toNN(double a)
 {
 	normalNumber num;
 	num.number = a;
 	num.step = 0;
 
-	while ((int)num.number > 0)
+	if (num.number == 0) return num;
+
+	while (abs((int)num.number) > 0)
 	{
 		num.number /= 10;
 		num.step++;
+	}
+
+	while (abs(num.number) < 0.1)
+	{
+		num.number *= 10;
+		num.step--;
 	}
 
 	return num;
@@ -198,7 +203,7 @@ string reverse(string a) //perevernyt masiy
 	return a;
 }
 
-string reverseCode(string str)
+string reverseCode(string str)//zamena 0 na 1 i naoborot
 {
 	if (str[0] == '0') return str;
 	else for (int i = 1; i < str.size(); i++) {
@@ -207,10 +212,12 @@ string reverseCode(string str)
 	}
 	return str;
 }
-string reverseplus(string str1, string str2)
+string reverseplus(string str1, string str2)// obratnoe slozhenie
 {
+	int cc = from10bi(str1) + from10bi(str2); // proverka znaka
+	if (cc == 0) return "0";
+
 	string str;
-	int rev = 0;
 	if (str1[0] == '1') {
 		str1 = reverseCode(str1);
 	}
@@ -219,15 +226,24 @@ string reverseplus(string str1, string str2)
 	}
 
 	str = plus2(StringToInt(str1), StringToInt(str2));
-	if (from10bi(str1) + from10bi(str2) < 0) str = reverseCode(str);
-	else str = to10bi(from2(str));
+
+	if ((from10bi(str1) + from10bi(str2) < 0) and (str.size() > max(str1.size(), str2.size()))) {
+		str = plus2(StringToInt(str), 1);
+		str = plus2(StringToInt(str), pow(10, str.size() - 1) * -1);
+		if (cc < 0) {
+			str = reverseCode(str);
+		}
+	}
+	else if (from10bi(str1) + from10bi(str2) < 0) str = reverseCode(str);
+
+	if (cc < 0) return str;
+	else return str = to10bi(from2(str));
 
 	return str;
 }
 
 string dopCode(string str)
 {
-	//str = reverseCode(str);
 	if (str[0] == '0') return str;
 	str = reverseCode(str);
 
@@ -236,8 +252,11 @@ string dopCode(string str)
 
 	return str;
 }
-string dopPlus(string str1, string str2)
+string dopPlus(string str1, string str2)//dopslozhenie
 {
+	int cc = from10bi(str1) + from10bi(str2); // proverka znaka
+	if (cc == 0) return "0";
+
 	string str;
 	int rev = 0;
 	if (str1[0] == '1') {
@@ -248,18 +267,27 @@ string dopPlus(string str1, string str2)
 		str2 = reverseCode(str2);
 		str2 = plus2(StringToInt(str2), 1);
 	}
-	long long a;
 	str = plus2(StringToInt(str1), StringToInt(str2));
-	if (from10bi(str1) + from10bi(str2) < 0) {
+
+	if ((from10bi(str1) + from10bi(str2) < 0) and (str.size() > max(str1.size(), str2.size()))) { 
+		str = plus2(StringToInt(str), pow(10, str.size() - 1) * -1);
+		if (from10bi(str) < 0) {
+			str = minus2(StringToInt(str), 1);
+			str = reverseCode(str);
+		}
+	}
+	else if (from10bi(str1) + from10bi(str2) < 0) {
 		str = minus2(StringToInt(str), 1);
 		str = reverseCode(str);
 	}
-	else str = to10bi(from2(str));
+
+	if (cc < 0) return str;
+	else return str = to10bi(from2(str));
 
 	return str;
 }
 
-long long StringToInt(string str)
+long long StringToInt(string str)// perev iz stringa v int
 {
 	long long a = 0;
 	for (int i = 0; i < str.size(); i++)
@@ -268,7 +296,7 @@ long long StringToInt(string str)
 	}
 	return a;
 }
-string IntToString(long long a)
+string IntToString(long long a)//perev v string iz inta
 {
 	long long a2 = a;
 	int counter = -1;
@@ -285,8 +313,7 @@ string IntToString(long long a)
 	str = reverse(str);
 	return str;
 }
-
-int* toASCII(string str)
+int* toASCII(string str)//v ASCII
 {
 	int* a;
 	a = new int[str.size()];
@@ -304,7 +331,7 @@ int* toASCII(string str)
 	cout << endl;
 	return a;
 }
-string fromASCII(int a[200])
+string fromASCII(int a[200])//iz ASCII
 {
 	string str = "";
 
@@ -315,9 +342,6 @@ string fromASCII(int a[200])
 	{
 		str += a[i];
 	}
-
-	//cout << str;
-
 	return str;
 }
 
@@ -326,7 +350,7 @@ string toBiTen(int a)
 	string str;
 	string temp_str;
 
-	a = StringToInt(reverse(IntToString(a)));
+	a = StringToInt(reverse(IntToString(a)));//dliya poscheta
 
 	while (a > 0)
 	{
@@ -343,7 +367,7 @@ string toBiTen(int a)
 
 	return str;
 }
-int fromBiTen(string str)
+int fromBiTen(string str)// iz 2-10 sistemy
 {
 	int a = 0;
 	string temp_str;
@@ -365,14 +389,14 @@ int fromBiTen(string str)
 
 	return a;
 }
-string to10bi(float a)
+string to10bi(float a)//v 10-2 sistemy
 {
 	string str = "";
 	str = to2(a);
 
 	str = reverse(str);
 
-	int aaa = str.size() % 4;
+	int aaa = str.size() % 4;//razdelka po 4 simvola
 	if (str.size() > 4)
 		for (int i = aaa; i < 3; ++i)
 		{
@@ -388,14 +412,13 @@ string to10bi(float a)
 		{
 			str.push_back('0');
 		}
-	//cout << str << endl;
-	if (a < 0) str.push_back('1');
-	else str.push_back('0');
+	if (a < 0) str.push_back('1');//podstanovka 1
+	else str.push_back('0');// podstanovka 0
 
 	str = reverse(str);
 	return str;
 }
-int from10bi(string str)
+int from10bi(string str)//proverka i dobavlenie znaka
 {
 	int minus = 1;
 	if (str[0] == '1') {
@@ -407,40 +430,32 @@ int from10bi(string str)
 	return a * minus;
 }
 
-string plus2(int a, int b)
+string plus2(int a, int b)//slozhenie 2 chisel
 {
 	int result;
 	result = a + b;
 	int temp = result;
 
-a: //
-	int i = 0;
+a: 
+	int res = 0;
 	while (temp != 0)
 	{
 		if (temp % 10 >= 2)
 		{
-			result += 1 * pow(10, i + 1);
+			result += 1 * pow(10, res + 1);
 			temp += 10;
-			result -= 2 * pow(10, i);
+			result -= 2 * pow(10, res);
 		}
 		temp /= 10;
-		i++;
+		res++;
 	}
 
-	i--;
-
-	//string str1 = IntToString(a), str2 = IntToString(b); ahahahahahahahhahahahhahhahahhhhhhhhhhhhhhahhaahhhahah
-	//if (
-	// (str1[0] == '1' or str2[0] == '1') and (Rank(a) < Rank(result) and Rank(b) < Rank(result))) { //
-	//	result++;											 
-	//	result -= 1 * pow(10, петя);				
-	//	//goto a;												 
-	//}
+	res--;
 
 	string str = IntToString(result);
 	return str;
 }
-string minus2(int a, int b)
+string minus2(int a, int b)//minus 2 chisel
 {
 	int result;
 	result = a - b;
@@ -461,17 +476,17 @@ string minus2(int a, int b)
 	return str;
 }
 
-string to2(float a)
+string to2(float a)//pervod v 2 sistemu
 {
 	char b[99];
 	int i = 0;
 	float a2 = a;
 
 	if (a < 0) a = abs(a);
-	if (a == 1) b[0] = '1'; //просто 1 и 0
+	if (a == 1) b[0] = '1'; //tolko 1 i 0
 	if (a == 0) b[0] = '0';
 
-	while (a != 1 and a != 0) //целая часть
+	while (a != 1 and a != 0) //celaya chast
 	{
 		if ((int)a % 2 == 0)
 			b[i] = '0';
@@ -492,10 +507,10 @@ string to2(float a)
 	}
 
 	i2 = 0;
-	if (a2 - (int)a2 > 0)  //дробная часть 
+	if (a2 - (int)a2 > 0)  //drobnaya chast
 	{
 
-		i++; b[i] = '.'; //geroicheskiy dot
+		i++; b[i] = '.'; //podstanovka tochki
 
 		a2 = a2 - (int)a2;
 		for (int j = 0; j < 4; j++)
@@ -528,7 +543,7 @@ string to2(float a)
 	}
 	return s;
 }
-float from2(string a)
+float from2(string a)//iz 2 v 10
 {
 	float b = 0; int i = 0;
 	while (a[i] == '1' or a[i] == '0')
@@ -545,7 +560,6 @@ float from2(string a)
 	{
 		step--;
 		if (a[i] == '1') b = b + pow(2, step); //esli 1 x2+1 esli 0 x2
-		//if (a[i] == '0') b = b * 2;
 		i++;
 	}
 	return b;
