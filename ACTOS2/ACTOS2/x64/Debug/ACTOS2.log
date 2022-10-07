@@ -1,46 +1,42 @@
 ﻿  ACTOS2.cpp
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(73,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(83,32): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(83,54): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(84,41): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(84,63): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(87,28): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(87,50): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(88,37): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(88,59): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(107,46): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(108,62): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(109,70): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(149,66): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(150,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(156,39): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(157,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(163,39): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(164,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(170,66): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(171,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(177,15): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(191,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(221,44): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(221,25): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(235,14): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(245,27): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(249,27): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(252,44): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(252,25): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(254,27): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(251,12): warning C4101: a: неиспользованная локальная переменная
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(267,23): warning C4244: +=: преобразование "double" в "__int64", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(329,17): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(333,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(359,24): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(364,17): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(382,3): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(406,8): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(422,16): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(424,16): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(416,2): warning C4102: a: неиспользованная метка
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(455,16): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(481,14): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(547,26): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(71,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(80,32): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(80,54): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(81,41): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(81,63): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(84,28): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(84,50): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(85,37): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(85,59): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(104,46): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(105,62): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(106,70): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(196,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(228,44): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(228,25): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(231,26): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(232,57): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(232,26): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(251,14): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(264,27): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(268,27): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(270,44): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(270,25): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(273,57): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(273,26): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(275,28): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(280,27): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(295,23): warning C4244: +=: преобразование "double" в "__int64", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(353,17): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(357,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(383,24): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(388,17): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(406,3): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(429,8): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(445,16): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(447,16): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(439,2): warning C4102: a: неиспользованная метка
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(470,16): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(496,14): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\ACTOS2\ACTOS2\ACTOS2.cpp(562,26): warning C4244: =: преобразование "double" в "float", возможна потеря данных
   ACTOS2.vcxproj -> D:\GIT-Repository\SecondCoure\ACTOS2\x64\Debug\ACTOS2.exe
