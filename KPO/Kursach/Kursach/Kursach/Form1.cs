@@ -6,5 +6,7 @@ namespace Kursach
         {
             InitializeComponent();
         }
+        bool LeftMove, UpMove;  
+
     }
 }
