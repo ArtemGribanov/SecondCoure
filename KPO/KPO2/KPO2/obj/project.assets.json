@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GIT-Repository\\SecondCoure\\KPO2\\KPO2\\KPO2.csproj",
+      "projectUniqueName": "D:\\GIT-Repository\\SecondCoure\\KPO\\KPO2\\KPO2\\KPO2.csproj",
       "projectName": "KPO2",
-      "projectPath": "D:\\GIT-Repository\\SecondCoure\\KPO2\\KPO2\\KPO2.csproj",
+      "projectPath": "D:\\GIT-Repository\\SecondCoure\\KPO\\KPO2\\KPO2\\KPO2.csproj",
       "packagesPath": "C:\\Users\\Артём\\.nuget\\packages\\",
-      "outputPath": "D:\\GIT-Repository\\SecondCoure\\KPO2\\KPO2\\obj\\",
+      "outputPath": "D:\\GIT-Repository\\SecondCoure\\KPO\\KPO2\\KPO2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Артём\\AppData\\Roaming\\NuGet\\NuGet.Config",

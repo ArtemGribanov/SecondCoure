@@ -17,7 +17,7 @@ namespace KPO2
         {
             string str = "";
             str = textBox1.Text;
-            RES.Text = N4(str);
+            RES.Text = N3(str);
         }
 
 
