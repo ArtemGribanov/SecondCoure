@@ -1,0 +1,4 @@
+﻿  KT1.cpp
+D:\GIT-Repository\SecondCoure\KT1\KT1\KT1.cpp(10,19): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+D:\GIT-Repository\SecondCoure\KT1\KT1\KT1.cpp(7,30): warning C4101: l: неиспользованная локальная переменная
+  KT1.vcxproj -> D:\GIT-Repository\SecondCoure\KT1\x64\Debug\KT1.exe
