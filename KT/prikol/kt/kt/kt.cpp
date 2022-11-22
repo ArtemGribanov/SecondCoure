@@ -4,32 +4,28 @@
 
 #include <vector>
 #include <functional>
-#include <algorithm>
 #include <tuple>
-#include <stdexcept>
-#include <memory>
 
 using namespace std;
 
 ///////lex analiz
-enum tok_names { ident, num, math };
-string names[3];
+static string Ident = "Ident", Number = "Number", Math = "Math", Assign = "Assign", RomeNumerals = "RomeNumerals";
 struct token
 {
-	enum tok_names token_name;
-	string token_names[3] = { "Ident", "Number", "Math" };
+	string token_name;
 	string token_value;
 };
-list<token> lexeme_table;
 
-token add_token(tok_names a, string b) {
+token add_token(string token_name, string token_value) {
 	token tok;
 
-	tok.token_name = a;
-	tok.token_value = b;
+	tok.token_name = token_name;
+	tok.token_value = token_value;
 
 	return tok;
 }
+
+//list<token> lexeme_table;
 list<token> lexer(string str)
 {
 	list<token> lexeme_table;
@@ -37,12 +33,41 @@ list<token> lexer(string str)
 	int i = 0; int value = 0;
 	while (i < str.size())
 	{
-		if (str[i] == '+') { lexeme_table.push_back(add_token(math, "+")); }
-		if (str[i] == '-') { lexeme_table.push_back(add_token(math, "-")); }
-		if (str[i] == '*') { lexeme_table.push_back(add_token(math, "*")); }
-		if (str[i] == '/') { lexeme_table.push_back(add_token(math, "/")); }
 
-		if ((str[i] >= 'a' and str[i] <= 'z') or (str[i] >= 'A' and str[i] <= 'Z')) {
+		if (str[i] == ':' and str[i + 1] == '=') { lexeme_table.push_back(add_token(Assign, ":=")); }
+
+		if (str[i] == '+') { lexeme_table.push_back(add_token(Math, "+")); }
+		if (str[i] == '-') { lexeme_table.push_back(add_token(Math, "-")); }
+		if (str[i] == '*') { lexeme_table.push_back(add_token(Math, "*")); }
+		if (str[i] == '/') { lexeme_table.push_back(add_token(Math, "/")); }
+
+		if ((str[i] == 'I' or str[i] == 'V' or str[i] == 'X')) {
+			string number = "";
+
+			while (str[i] == 'I' or str[i] == 'V' or str[i] == 'X')
+			{
+
+				if (str[i] == 'I') {
+					number += str[i];
+					i++;
+				}
+
+				if (str[i] == 'X') {
+					number += str[i];
+					i++;
+				}
+
+				if (str[i] == 'V') {
+					number += str[i];
+					i++;
+				}
+
+				if (i > str.size()) break;
+			}
+			lexeme_table.push_back(add_token(RomeNumerals, number));
+		}
+
+		if ((str[i] >= 'a' and str[i] <= 'z') or (str[i] >= 'A' and str[i] <= 'Z') and str[i] != 'I' and str[i] != 'V' and str[i] != 'X') {
 			string var = "";
 			while ((str[i] >= 'a' and str[i] <= 'z') or (str[i] >= 'A' and str[i] <= 'Z') or (str[i] >= '0' and str[i] <= '9'))
 			{
@@ -50,7 +75,7 @@ list<token> lexer(string str)
 				i++;
 			}
 			i--;
-			lexeme_table.push_back(add_token(ident, var));
+			lexeme_table.push_back(add_token(Ident, var));
 		}
 
 		if ((str[i] >= '0' and str[i] <= '9')) {
@@ -61,7 +86,7 @@ list<token> lexer(string str)
 				i++;
 			}
 			i--;
-			lexeme_table.push_back(add_token(num, number));
+			lexeme_table.push_back(add_token(Number, number));
 		}
 
 		i++;
@@ -77,109 +102,149 @@ struct node
 };
 node* tree = NULL;                      //Объявляем переменную, тип которой структура Дерево
 
-
-
-void pushTree(token token, node** t) //Add
+void pushTree(token token, node** t) //dobavlenie ddlya +/- i operandov
 {
-	if ((*t) == NULL)                   //Если дерева не существует
+	if ((*t) == NULL)
 	{
-		(*t) = new node;                //Выделяем память
-		(*t)->token = token;                 //Кладем в выделенное место аргумент a
-		(*t)->l = (*t)->r = NULL;       //Очищаем память для следующего роста
-		return;                         //Заложили семечко, выходим
+		(*t) = new node;
+		(*t)->token = token;
+		(*t)->l = (*t)->r = NULL;
+		return;
 	}
-	//Дерево есть
 
-	if (token.token_name != num and token.token_name != ident) {
+	if (token.token_name != Number and token.token_name != Ident and token.token_name != RomeNumerals) //ostalnoje pravo
+	{
 		pushTree(token, &(*t)->r);
 		return;
 	}
-	if ((token.token_name == num or token.token_name == ident) and (*t)->l == NULL) {
+	if ((token.token_name == Number or token.token_name == Ident or token.token_name == RomeNumerals) and (*t)->l == NULL) //esli identificator i levo pusto to levo
+	{
 		pushTree(token, &(*t)->l);
 		return;
 	}
 	else {
-		pushTree(token, &(*t)->r);
+		pushTree(token, &(*t)->r); // esli levo zanyato to pravo
 		return;
 	}
 }
 
 void printTriad(node** t, int u)
 {
-	//if ()
-	if ((*t)->r->token.token_name == math)
+	if ((*t)->r->token.token_name == Math)
 	{
 		printTriad(&(*t)->r, ++u);
-		//int count = u;
 		cout << u << ". ";
-		//count--;
 
 		cout << (*t)->token.token_value;
-		cout << '(';
-		//u++;
-		if ((*t)->l->token.token_name != math) cout << u + 1 << '^' << ',' << (*t)->l->token.token_value;
-		else cout << u + 1 << "^," << u << '^';
-		cout << ')' << endl;
-		//return;
-		if ((*t)->l->token.token_name == math)
-		{
-			//u++;
-			cout << u << ". ";
+		if ((*t)->l->token.token_name != Math) cout << '(' << u + 1 << '^' << ',' << (*t)->l->token.token_value << ')' << endl;
+		else cout << '(' << u + 1 << "^," << u << '^' << ')' << endl;
 
+		if ((*t)->l->token.token_name == Math)
+		{
+			cout << u << ". ";
 			cout << (*t)->l->token.token_value;
-			cout << '(';
-			cout << (*t)->l->r->token.token_value << ',' << (*t)->l->l->token.token_value;
-			cout << ')' << endl;
+			cout << '(' << (*t)->l->r->token.token_value << ',' << (*t)->l->l->token.token_value << ')' << endl;
 		}
 	}
 	else
 	{
 		u++;
-		//int count = u;
 		cout << u << ". ";
-
-		cout << (*t)->token.token_value;
-		cout << '(';
-		cout << (*t)->r->token.token_value << ',';
-		cout << (*t)->l->token.token_value;
-		cout << ')' << endl;
+		cout << (*t)->token.token_value << '(' << (*t)->r->token.token_value << ',' << (*t)->l->token.token_value << ')' << endl;
 		return;
 	}
 }
 
-static std::string ch_hor = "-", ch_ver = "|", ch_ddia = "/", ch_rddia = "\\", ch_udia = "\\", ch_ver_hor = "|-", ch_udia_hor = "\\-", ch_ddia_hor = "/-", ch_ver_spa = "| ";
-void printTree(node const* t, std::string const& prefix = "", bool root = true, bool last = true) {
-	std::cout << prefix << (root ? "" : (last ? ch_udia_hor : ch_ver_hor)) << (t ?(t->token.token_value) : "") << std::endl;
-	if (!t || (!t->l && !t->r))
-		return;
-	std::vector<node*> v{ t->l, t->r };
-	for (size_t i = 0; i < v.size(); ++i)
-		printTree(v[i], prefix + (root ? "" : (last ? "  " : ch_ver_spa)), false, i + 1 >= v.size());
+void printTreeOld(node* t, int u, bool Direction) //Input
+{
+	if (t == NULL) return;                  //Если дерево пустое, то отображать нечего, выходим
+	else //Иначе
+	{
+		printTreeOld(t->l, ++u, 1);                   //С помощью рекурсивного посещаем левое поддерево
+		for (int i = 0; i < u; ++i) cout << "/";
+		if (u != 1) Direction == 1 ? cout << "<left>" : cout << "<right>";
+		cout << "\t" << t->token.token_value << endl;
+		u--;
+	}
+	printTreeOld(t->r, ++u, 0);                       //С помощью рекурсии посещаем правое поддерево
 }
 
+void printTree(node const* t) {
+	static std::string ch_hor = "-", ch_ver = "|", ch_ddia = "/", ch_rddia = "\\", ch_udia = "\\", ch_ver_hor = "|-", ch_udia_hor = "\\-", ch_ddia_hor = "/-", ch_ver_spa = "| ";
+#define _MAX(x, y) ((x) > (y) ? (x) : (y))
+#define _MIN(x, y) ((x) < (y) ? (x) : (y))
+
+	auto RepStr = [](std::string const& s, size_t cnt) {
+		if (ptrdiff_t(cnt) < 0)
+			throw std::runtime_error("RepStr: Bad value " + std::to_string(ptrdiff_t(cnt)) + "!");
+		std::string r;
+		for (size_t i = 0; i < cnt; ++i)
+			r += s;
+		return r;
+	};
+	std::function<std::tuple<std::vector<std::string>, size_t, size_t>(node const* t, bool)> Rec;
+	Rec = [&RepStr, &Rec](node const* t, bool left) {
+		std::vector<std::string> lines;
+		if (!t)
+			return std::make_tuple(lines, size_t(0), size_t(0));
+		auto sval = (t->token.token_value);
+		//if (sval.size() % 2 != 1) sval += " ";
+		auto resl = Rec(t->l, true), resr = Rec(t->r, false);
+		auto const& vl = std::get<0>(resl);
+		auto const& vr = std::get<0>(resr);
+		auto cl = std::get<1>(resl), cr = std::get<1>(resr), lss = std::get<2>(resl), rss = std::get<2>(resr);
+		size_t lv = sval.size();
+		size_t ls = vl.size() > 0 ? lss : size_t(0);
+		size_t rs = vr.size() > 0 ? rss : size_t(0);
+		size_t lis = ls == 0 ? lv / 2 : _MAX(int(lv / 2 + 1 - (ls - cl)), 0);
+		size_t ris = rs == 0 ? (lv + 1) / 2 : _MAX(int((lv + 1) / 2 - cr), (lis > 0 ? 0 : 1));
+		size_t dashls = (ls == 0 ? 0 : ls - cl - 1 + lis - lv / 2), dashrs = (rs == 0 ? 0 : cr + ris - (lv + 1) / 2);
+		//DEB(node->value); DEB(lv); DEB(ls); DEB(rs); DEB(cl); DEB(cr); DEB(lis); DEB(ris); DEB(dashls); DEB(dashrs); std::cout << std::endl;
+		lines.push_back(
+			(ls == 0 ? "" : (RepStr(" ", cl) + ch_ddia + RepStr(ch_hor, dashls))) +
+			sval + (rs == 0 ? "" : (RepStr(ch_hor, dashrs) + ch_rddia + RepStr(" ", rs - cr - 1)))
+		);
+		//if (lines.back().size() != ls + lis + ris + rs)
+		//    throw std::runtime_error("Dump: First line wrong size, got " + std::to_string(lines.back().size()) + ", expected " + std::to_string(ls + lis + ris + rs));
+		for (size_t i = 0; i < _MAX(vl.size(), vr.size()); ++i) {
+			std::string sl = RepStr(" ", ls), sr = RepStr(" ", rs);
+			if (i < vl.size()) sl = vl[i];
+			if (i < vr.size()) sr = vr[i];
+			sl = sl + RepStr(" ", lis);
+			sr = RepStr(" ", ris) + sr;
+			lines.push_back(sl + sr);
+		}
+		return std::make_tuple(lines, (left || ls + lis == 0 || lv % 2 == 1) ? ls + lis : ls + lis - 1, ls + lis + ris + rs);
+	};
+	auto v = std::get<0>(Rec(t, true));
+	for (size_t i = 0; i < v.size(); ++i)
+		std::cout << v[i] << std::endl;
+
+#undef _MAX
+#undef _MIN
+}
 
 int main()
 {
+	setlocale(LC_ALL, "");
 	token tok;
-	string str = "A + B + 12 * 13 + C + D"; //A + B + 12 * 13 + C + D //1 * 2 + A
+	string str = "A := B * 12 * IX + C"; //A + B + 12 * 13 + C + D //1 * 2 + A
 	list<token> lexeme_table = lexer(str);
-
 
 	list<token> temp = lexeme_table;
 	while (temp.empty() == 0) {
 		tok = temp.front();
-		cout << "<TOKEN_NAME:" << tok.token_names[tok.token_name] << ",\t" << "TOKEN_VALUE:" << tok.token_value << ">" << endl;
+		cout << "<TOKEN_NAME:" << tok.token_name << ",\t" << "TOKEN_VALUE:" << tok.token_value << ">" << endl;
 		temp.pop_front();
 	}
 	cout << endl;
 
-	list<token> znak;
-	list<token> identif;
-
+	list<token> znak; //tyt znaki
+	list<token> identif; //tyt cifri
 	temp = lexeme_table;
-	while (temp.size() > 0)
+	while (temp.size() > 0) //razdelyaet identifikatori i operatori(cifri i znaki)
 	{
-		if (temp.front().token_name == num or temp.front().token_name == ident) {
+		if (temp.front().token_name == Number or temp.front().token_name == Ident or temp.front().token_name == RomeNumerals) {
 			identif.push_back(temp.front());
 			temp.pop_front();
 		}
@@ -188,17 +253,17 @@ int main()
 			temp.pop_front();
 		}
 	}
-
 	node* sosna = NULL;
 
-	while (znak.size() > 0 or identif.size() > 0)
+	while (znak.size() > 0)
 	{
-		if (znak.size() > 0)
-		{
-			pushTree(znak.front(), &sosna);
-			znak.pop_front();
-		}
-		pushTree(identif.front(), &sosna);
+		pushTree(znak.front(), &sosna); //dobavlyet operandi v derevo
+		znak.pop_front();
+	}
+
+	while (identif.size() > 0)
+	{
+		pushTree(identif.front(), &sosna); //dobavlyaet slogaemie v derevo
 		identif.pop_front();
 	}
 

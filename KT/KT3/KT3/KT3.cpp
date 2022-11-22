@@ -166,7 +166,7 @@ void printTree(node* t, int u, bool Direction) //Input
 int main()
 {
 	token tok;
-	string str = "A + 12.03] + XVI";
+	string str = "G + 26.03 +5";
 	list<token> lexeme_table = lexer(str);
 
 
