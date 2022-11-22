@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    int pos = 0, n, a = 0, j, c = 0, b = 0;
+    int pos = 0, n, a = 0, j,l, c = 0, b = 0;
     string s, mas[100];
     getline(cin, s);
     n = s.length();
@@ -18,7 +18,7 @@ int main()
             }
             mas[a] += "Ключевое слово: for";
             pos = i;
-            i++;
+            i+=3;
             a++;
 
         }
@@ -31,20 +31,18 @@ int main()
                 }
                 mas[a] += "Ключевое слово: do";
                 pos = i;
-                i += 3;
+                i += 2;
                 a++;
             }
             else
-                if (i == s.find("then", pos))
+                if (i == s.find(")", pos))
                 {
                     if (mas[a].empty() == false)
                     {
                         a++;
                     }
-                    mas[a] += "Ключевое слово: then";
                     pos = i;
-                    i += 3;
-                    a++;
+                    i += 1;
                 }
                 else
 
@@ -126,17 +124,7 @@ int main()
                                                     m[b] = s[j];
                                                     b++;
                                                     j++;
-                                                }
-                                                if (s[j] == 'E' && s[j + 1] == '+' && s[j + 2] >= '0' && s[j + 2] <= '9')
-                                                {
-                                                    c++;
-                                                    m[b] = s[j];
-                                                    b++;
-                                                    j++;
-                                                    m[b] = s[j];
-                                                    b++;
-                                                    j++;
-                                                }
+                                                } 
                                             }
 
                                             if (c > 0)
@@ -148,31 +136,13 @@ int main()
                                                 }
                                                 i = j - 1;
                                                 a++;
-                                            }
-                                            else
-                                            {
-                                                if (s[j] == 'E' && s[j + 1] == '+')
-                                                {
-                                                    m[b] = s[j];
-                                                    b++;
-                                                    j++;
-                                                    m[b] = s[j];
-                                                    b++;
-                                                    j++;
-                                                }
-                                                mas[a] += "Идентификатор: ";
-                                                for (int h = 0; h < j; h++)
-                                                {
-                                                    mas[a] += m[h];
-                                                }
-                                                i = j - 1;
-                                                a++;
-                                            }
+                                            }     
                                         }
                                         else
                                         {
                                             if (mas[a].empty() == true)
-                                            {
+                                            {   
+                                              
                                                 mas[a] += "Идентификатор: ";
                                             }
                                             mas[a] += s[i];

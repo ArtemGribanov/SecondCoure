@@ -1,0 +1,17 @@
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\bin\Debug\net6.0-windows\Kursach.exe
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\bin\Debug\net6.0-windows\Kursach.deps.json
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\bin\Debug\net6.0-windows\Kursach.runtimeconfig.json
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\bin\Debug\net6.0-windows\Kursach.dll
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\bin\Debug\net6.0-windows\Kursach.pdb
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\obj\Debug\net6.0-windows\Kursach.csproj.AssemblyReference.cache
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\obj\Debug\net6.0-windows\Kursach.Form1.resources
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\obj\Debug\net6.0-windows\Kursach.csproj.GenerateResource.cache
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\obj\Debug\net6.0-windows\Kursach.GeneratedMSBuildEditorConfig.editorconfig
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\obj\Debug\net6.0-windows\Kursach.AssemblyInfoInputs.cache
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\obj\Debug\net6.0-windows\Kursach.AssemblyInfo.cs
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\obj\Debug\net6.0-windows\Kursach.csproj.CoreCompileInputs.cache
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\obj\Debug\net6.0-windows\Kursach.dll
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\obj\Debug\net6.0-windows\refint\Kursach.dll
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\obj\Debug\net6.0-windows\Kursach.pdb
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\obj\Debug\net6.0-windows\Kursach.genruntimeconfig.cache
+D:\GIT-Repository\SecondCoure\KPO\Kursach\Kursach\Kursach\obj\Debug\net6.0-windows\ref\Kursach.dll
