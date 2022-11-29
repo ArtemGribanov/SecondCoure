@@ -1,0 +1,17 @@
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\bin\Debug\net6.0-windows\KursachNewNew.exe
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\bin\Debug\net6.0-windows\KursachNewNew.deps.json
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\bin\Debug\net6.0-windows\KursachNewNew.runtimeconfig.json
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\bin\Debug\net6.0-windows\KursachNewNew.dll
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\bin\Debug\net6.0-windows\KursachNewNew.pdb
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\KursachNewNew.csproj.AssemblyReference.cache
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\KursachNewNew.Form1.resources
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\KursachNewNew.csproj.GenerateResource.cache
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\KursachNewNew.GeneratedMSBuildEditorConfig.editorconfig
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\KursachNewNew.AssemblyInfoInputs.cache
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\KursachNewNew.AssemblyInfo.cs
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\KursachNewNew.csproj.CoreCompileInputs.cache
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\KursachNewNew.dll
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\refint\KursachNewNew.dll
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\KursachNewNew.pdb
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\KursachNewNew.genruntimeconfig.cache
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\ref\KursachNewNew.dll
