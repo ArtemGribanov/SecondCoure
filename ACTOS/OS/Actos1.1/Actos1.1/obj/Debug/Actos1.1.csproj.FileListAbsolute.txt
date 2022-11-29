@@ -1,0 +1,8 @@
+D:\GIT-Repository\SecondCoure\ACTOS\OS\Actos1.1\Actos1.1\bin\Debug\Actos1.1.exe.config
+D:\GIT-Repository\SecondCoure\ACTOS\OS\Actos1.1\Actos1.1\bin\Debug\Actos1.1.exe
+D:\GIT-Repository\SecondCoure\ACTOS\OS\Actos1.1\Actos1.1\bin\Debug\Actos1.1.pdb
+D:\GIT-Repository\SecondCoure\ACTOS\OS\Actos1.1\Actos1.1\obj\Debug\Actos1.1.csproj.AssemblyReference.cache
+D:\GIT-Repository\SecondCoure\ACTOS\OS\Actos1.1\Actos1.1\obj\Debug\Actos1.1.csproj.SuggestedBindingRedirects.cache
+D:\GIT-Repository\SecondCoure\ACTOS\OS\Actos1.1\Actos1.1\obj\Debug\Actos1.1.csproj.CoreCompileInputs.cache
+D:\GIT-Repository\SecondCoure\ACTOS\OS\Actos1.1\Actos1.1\obj\Debug\Actos1.1.exe
+D:\GIT-Repository\SecondCoure\ACTOS\OS\Actos1.1\Actos1.1\obj\Debug\Actos1.1.pdb

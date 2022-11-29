@@ -1,0 +1,2 @@
+ Get-CimInstance -ClassName Win32_SystemDriver | where ServiceType -eq "Kernel Driver"|  Format-List -Property Name, StartMode | Out-File -FilePath .\result.txt
+Get-CimInstance -classname Win32_SystemProcesses| format-list -property PartComponent| Out-File -FilePath .\ServiceID.txt

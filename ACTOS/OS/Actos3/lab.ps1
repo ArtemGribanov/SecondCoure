@@ -1,0 +1,1 @@
+Get-Service | Where-Object {$_.Status -EQ "Running"} | Sort-Object DisplayName|Out-File -FilePath .\Result.txt

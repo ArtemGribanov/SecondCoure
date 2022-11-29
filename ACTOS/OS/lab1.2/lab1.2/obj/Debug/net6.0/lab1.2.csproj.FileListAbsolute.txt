@@ -1,0 +1,15 @@
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\bin\Debug\net6.0\lab1.2.exe
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\bin\Debug\net6.0\lab1.2.deps.json
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\bin\Debug\net6.0\lab1.2.runtimeconfig.json
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\bin\Debug\net6.0\lab1.2.dll
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\bin\Debug\net6.0\lab1.2.pdb
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\obj\Debug\net6.0\lab1.2.csproj.AssemblyReference.cache
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\obj\Debug\net6.0\lab1.2.GeneratedMSBuildEditorConfig.editorconfig
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\obj\Debug\net6.0\lab1.2.AssemblyInfoInputs.cache
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\obj\Debug\net6.0\lab1.2.AssemblyInfo.cs
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\obj\Debug\net6.0\lab1.2.csproj.CoreCompileInputs.cache
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\obj\Debug\net6.0\lab1.2.dll
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\obj\Debug\net6.0\refint\lab1.2.dll
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\obj\Debug\net6.0\lab1.2.pdb
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\obj\Debug\net6.0\lab1.2.genruntimeconfig.cache
+D:\GIT-Repository\SecondCoure\ACTOS\OS\lab1.2\lab1.2\obj\Debug\net6.0\ref\lab1.2.dll
