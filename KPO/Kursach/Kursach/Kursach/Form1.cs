@@ -284,57 +284,7 @@ namespace Kursach
         //            RestoreScore();
         //            pb_Ball.Location = new Point(208, rng.Next(10, 190));
         //            pb_Player.Location = new Point(3, 67);
-        //            pb_Enemy.Location = new Point(409, 67);
-        //            Round = 0;
-        //            label_Time.Visible = false;
-        //        }
-        //    }
-
-        //    public void RestoreScore()
-        //    {
-        //        for (int i = 0; i <= 5; i++)
-        //        {   //Resets all the score boxes to their original color
-        //            PicID(i).BackColor = ScoreColor;
-        //            PicID(i, true).BackColor = ScoreColor;
-        //        }
-        //    }
-        //    public PictureBox PicID(int i, Boolean Enemy = false)
-        //    {
-        //        if (Enemy)
-        //        {   //Just to make life easier, able to do a loop and go through all of these.
-        //            switch (i)
-        //            {
-        //                case 1:
-        //                    return enemy_1;
-        //                case 2:
-        //                    return enemy_2;
-        //                case 3:
-        //                    return enemy_3;
-        //                case 4:
-        //                    return enemy_4;
-        //                case 5:
-        //                    return enemy_5;
-        //            }
-        //        }
-        //        else
-        //        {
-        //            switch (i)
-        //            {
-        //                case 1:
-        //                    return player_1;
-        //                case 2:
-        //                    return player_2;
-        //                case 3:
-        //                    return player_3;
-        //                case 4:
-        //                    return player_4;
-        //                case 5:
-        //                    return player_5;
-        //            }
-        //        }
-        //        return pb_Ball;
-        //    }
-
+        //w
     }
 
 
