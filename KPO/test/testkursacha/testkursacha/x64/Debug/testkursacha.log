@@ -1,0 +1,75 @@
+﻿  Ball.cpp
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Ball.cpp(28,29): warning C4305: инициализация: усечение из "double" в "float"
+  Box.cpp
+  CircleBumper.cpp
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\CircleBumper.cpp(31,16): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\CircleBumper.cpp(31,13): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\CircleBumper.cpp(32,11): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\CircleBumper.cpp(50,12): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\CircleBumper.cpp(53,13): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+  Flipper.cpp
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Flipper.cpp(83,15): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Flipper.cpp(123,21): warning C4305: аргумент: усечение из "double" в "float"
+  Peg.cpp
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Peg.cpp(29,23): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Peg.cpp(29,20): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Peg.cpp(30,6): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Peg.cpp(50,12): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Peg.cpp(54,13): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+  Spring.cpp
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Spring.cpp(26,25): warning C4305: инициализация: усечение из "double" в "float"
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Spring.cpp(61,14): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+  Target.cpp
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Target.cpp(28,20): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Target.cpp(28,17): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Target.cpp(50,12): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Target.cpp(54,13): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+  testkursacha.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\sal.h(2361,1): error C2144: синтаксическая ошибка: перед "int" требуется ";"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\sal.h(2361,8): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(60,2): error C3861: glutPostRedisplay: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(99,23): error C2065: GLUT_LEFT_BUTTON: необъявленный идентификатор
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(101,16): error C2065: GLUT_DOWN: необъявленный идентификатор
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(116,2): error C3861: glutSetWindow: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(118,10): error C2065: GL_COLOR_BUFFER_BIT: необъявленный идентификатор
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(118,2): error C3861: glClear: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(181,2): error C3861: glRasterPos3f: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(184,23): error C2065: GLUT_BITMAP_TIMES_ROMAN_24: необъявленный идентификатор
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(184,3): error C3861: glutBitmapCharacter: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(186,2): error C3861: glColor3f: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(188,2): error C3861: glRasterPos3f: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(191,23): error C2065: GLUT_BITMAP_TIMES_ROMAN_24: необъявленный идентификатор
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(191,3): error C3861: glutBitmapCharacter: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(194,2): error C3861: glRasterPos3f: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(197,23): error C2065: GLUT_BITMAP_TIMES_ROMAN_24: необъявленный идентификатор
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(197,3): error C3861: glutBitmapCharacter: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(200,2): error C3861: glRasterPos3f: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(203,23): error C2065: GLUT_BITMAP_TIMES_ROMAN_24: необъявленный идентификатор
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(203,3): error C3861: glutBitmapCharacter: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(206,2): error C3861: glutSwapBuffers: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(212,2): error C3861: glClearColor: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(214,15): error C2065: GL_PROJECTION: необъявленный идентификатор
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(214,2): error C3861: glMatrixMode: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(215,2): error C3861: glLoadIdentity: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(216,2): error C3861: glOrtho: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(242,2): error C3861: glutInit: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(244,22): error C2065: GLUT_DOUBLE: необъявленный идентификатор
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(244,36): error C2065: GLUT_RGB: необъявленный идентификатор
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(244,2): error C3861: glutInitDisplayMode: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(246,2): error C3861: glutInitWindowSize: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(248,2): error C3861: glutInitWindowPosition: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(250,11): error C3861: glutCreateWindow: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(256,2): error C3861: glutDisplayFunc: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(259,2): error C3861: glutPassiveMotionFunc: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(260,2): error C3861: glutMotionFunc: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(261,2): error C3861: glutMouseFunc: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(262,2): error C3861: glutIdleFunc: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(263,2): error C3861: glutKeyboardFunc: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(264,2): error C3861: glutKeyboardUpFunc: идентификатор не найден
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\testkursacha.cpp(267,2): error C3861: glutMainLoop: идентификатор не найден
+  TriangleBumper.cpp
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\TriangleBumper.cpp(15,23): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  Vector.cpp
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Vector.cpp(25,13): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+D:\GIT-Repository\SecondCoure\KPO\test\testkursacha\testkursacha\Vector.cpp(84,13): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+  Создание кода...

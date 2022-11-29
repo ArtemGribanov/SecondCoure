@@ -1,0 +1,17 @@
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\bin\Debug\net6.0-windows\KursachNew.exe
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\bin\Debug\net6.0-windows\KursachNew.deps.json
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\bin\Debug\net6.0-windows\KursachNew.runtimeconfig.json
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\bin\Debug\net6.0-windows\KursachNew.dll
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\bin\Debug\net6.0-windows\KursachNew.pdb
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\obj\Debug\net6.0-windows\KursachNew.csproj.AssemblyReference.cache
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\obj\Debug\net6.0-windows\KursachNew.Form1.resources
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\obj\Debug\net6.0-windows\KursachNew.csproj.GenerateResource.cache
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\obj\Debug\net6.0-windows\KursachNew.GeneratedMSBuildEditorConfig.editorconfig
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\obj\Debug\net6.0-windows\KursachNew.AssemblyInfoInputs.cache
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\obj\Debug\net6.0-windows\KursachNew.AssemblyInfo.cs
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\obj\Debug\net6.0-windows\KursachNew.csproj.CoreCompileInputs.cache
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\obj\Debug\net6.0-windows\KursachNew.dll
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\obj\Debug\net6.0-windows\refint\KursachNew.dll
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\obj\Debug\net6.0-windows\KursachNew.pdb
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\obj\Debug\net6.0-windows\KursachNew.genruntimeconfig.cache
+D:\GIT-Repository\SecondCoure\KPO\KursachNew\KursachNew\KursachNew\obj\Debug\net6.0-windows\ref\KursachNew.dll
