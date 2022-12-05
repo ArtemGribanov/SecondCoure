@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GIT-Repository\\SecondCoure\\KursachNew\\KursachNew\\KursachNew.csproj",
+      "projectUniqueName": "D:\\GIT-Repository\\SecondCoure\\KPO\\KursachNew\\KursachNew\\KursachNew.csproj",
       "projectName": "KursachNew",
-      "projectPath": "D:\\GIT-Repository\\SecondCoure\\KursachNew\\KursachNew\\KursachNew.csproj",
+      "projectPath": "D:\\GIT-Repository\\SecondCoure\\KPO\\KursachNew\\KursachNew\\KursachNew.csproj",
       "packagesPath": "C:\\Users\\Артём\\.nuget\\packages\\",
-      "outputPath": "D:\\GIT-Repository\\SecondCoure\\KursachNew\\KursachNew\\obj\\",
+      "outputPath": "D:\\GIT-Repository\\SecondCoure\\KPO\\KursachNew\\KursachNew\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Артём\\AppData\\Roaming\\NuGet\\NuGet.Config",
