@@ -6,12 +6,12 @@ windowsdir = "Windows folder: " & shell.ExpandEnvironmentStrings("%windir%") & v
         "PATH: " & shell.ExpandEnvironmentStrings("C:\Windows\System32") & vbCRLF & _ 
         "Computer name: " & network.ComputerName & vbCRLF  & _
         "Username: " & network.UserName
-            
+	
+             
 MsgBox(windowsdir)
-
+MsgBox(Wscript.Echo "OS Type: " & objOperatingSystem.OSType)
 strComputer = "."
-Set objWMIService = GetObject("winmgmts:" _
-    & "{impersonationLevel=impersonate}!\\" & strComputer & "\root\cimv2")
+Set objWMIService = GetObject("winmgmts:"  & "{impersonationLevel=impersonate}!\\" & strComputer & "\root\cimv2")
 
 Set colInstalledPrinters = objWMIService.ExecQuery _
     ("Select * from Win32_Printer")
