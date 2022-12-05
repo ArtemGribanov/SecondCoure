@@ -1,40 +1,49 @@
 using System.ComponentModel.Design.Serialization;
+using System.Drawing.Drawing2D;
+using System.Text;
 
 namespace KursachNewNew
 {
     public partial class Form1 : Form
     {
 
-        bool goleftUp;
+        bool goleftUp; // some initialization
         bool goleftDown;
         bool gorightUp;
         bool gorightDown;
         bool isGameOver;
+        bool SpringDown;
 
         int score;
         int ballx;
         int bally;
         int playerSpeed;
-
-        Random rnd =new Random();
+        int i = 0;
+        Random rnd =new Random(); //random function
         public Form1()
         {
             InitializeComponent();
 
-            setupGame();
+            PlaceBall();
         }
 
         private void setupGame()
         {
+            i = 0;
             score = 0;
-            ballx = 5;
-            bally = 5;
+            ballx = 0;
+            bally = 0;
             playerSpeed = 12;
             txtScore.Text = "Score: " + score;
-
+            label_Time.Text = "Time:";
+            Trigger.Location = new Point(523, 0);
+            BrickForSpring.Location = new Point(490, 357);
+            timer_Sec.Enabled = false;
+            isGameOver = false;
+            BrickForSpring.Visible = false;
             gameTimer.Start();
 
-            foreach(Control x in this.Controls)
+            foreach(Control x in this.Controls) //paint our blocks
             {
                 if (x is PictureBox && (string)x.Tag == "blocks")
                 {
@@ -43,18 +52,18 @@ namespace KursachNewNew
             }
         }
 
-        private void gameOver(string message)
+        private void gameOver(string message) // game over event
         {
             isGameOver = true;
             gameTimer.Stop();
-
+            timer_Sec.Stop();
             txtScore.Text = "Score: " + score + " " + message;
         }
 
         private void mainGameTimerEvent(object sender, EventArgs e)
         {
-            txtScore.Text = "Score:" + score;
-            if (goleftUp == true )
+            txtScore.Text = "Score:" + score; // score counter
+            if (goleftUp == true) //left player go up
             {
                 while(playerLeft.Top >= 700)
                 {
@@ -62,7 +71,7 @@ namespace KursachNewNew
                 }
                     //playerLeft.Top = 700;
             }
-            if (goleftUp == false )
+            if (goleftUp == false ) // left player go down
             {
                 while (playerLeft.Top <= 720)
                 {
@@ -70,26 +79,26 @@ namespace KursachNewNew
                 }
                 //playerLeft.Top = 720 ;
             }
-            if (gorightUp == true)
+            if (gorightUp == true) // right player go up
             {
                 playerRight.Top = 700;
             }
-            if (gorightUp == false)
+            if (gorightUp == false) // right player go down
             {
                 playerRight.Top = 720;
             }
             ball.Left += ballx;
             ball.Top += bally;
 
-            if (ball.Left < 0 || ball.Left > 566)
+            if (ball.Left < 0 || ball.Left > 562) // bounce with left and right corner
             {
                 ballx = -ballx;
             }
-            if (ball.Top < 0)
+            if (ball.Top < 0) //bounce with top corner
             {
                 bally = -bally;
             }
-            if (ball.Bounds.IntersectsWith(playerLeft.Bounds))
+            if (ball.Bounds.IntersectsWith(playerLeft.Bounds)) // interact with Left Player
             {
                 bally = rnd.Next(5, 12) * -1;
 
@@ -102,7 +111,7 @@ namespace KursachNewNew
                     ballx = rnd.Next(5, 12);
                 }
             }
-            if (ball.Bounds.IntersectsWith(playerRight.Bounds))
+            if (ball.Bounds.IntersectsWith(playerRight.Bounds)) // interact with Right Player
             {
                 bally = rnd.Next(5, 12) * -1;
 
@@ -115,8 +124,9 @@ namespace KursachNewNew
                     ballx = rnd.Next(5, 12);
                 }
             }
-            if (ball.Bounds.IntersectsWith(Spring.Bounds))
+            if (ball.Bounds.IntersectsWith(Spring.Bounds))// interact with spring
             {
+                timer_Sec.Enabled = true;
                 bally = rnd.Next(5, 12) * -1;
 
                 if (ballx < 0)
@@ -128,12 +138,29 @@ namespace KursachNewNew
                     ballx = rnd.Next(5, 12);
                 }
             }
-            if (ball.Bounds.IntersectsWith(wall.Bounds))
+            foreach (Control x in this.Controls) //bounce for wall
             {
-                ballx = -ballx;
+                if (x is PictureBox && (string)x.Tag == "wall")
+                
+                {
+                    if (ball.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        ballx = -ballx;//change direction
+                    }
+                }
             }
-
-            foreach (Control x in this.Controls)
+            
+            if(SpringDown == true)
+            {
+                Spring.Height = 80;Spring.Top = 675; //stretching the spring
+            }
+            if (SpringDown == false)
+            {
+                Spring.Height = 50; Spring.Top = 698;//contraction the spring
+                
+            }
+               
+            foreach (Control x in this.Controls)// bounce with blocks
             {
                 if (x is PictureBox && (string)x.Tag == "blocks")
                 {
@@ -142,22 +169,43 @@ namespace KursachNewNew
                         score += 1;
 
                         bally = -bally;
-
-                        
                     }
 
                 }
             }
-
-            
-
-            if(ball.Top > 740)
+            if (ball.Bounds.IntersectsWith(Trigger.Bounds)) //trigger for closing wall
+            {
+                
+                EventTickForSpring.Enabled = true;
+            }
+            if (ball.Top > 740)//dead zone
             {
                 gameOver("You Lose");
             }
+           
+        }
+        private void PlaceBall()
+        {
+            ball.Left =558;
+            ball.Top =663;
+            setupGame();
+        }
+        
+        private void Timer_Sec(object sender, EventArgs e)
+        {
+            i++;
+            
+            label_Time.Text = "Time: " + i.ToString();
+        }
+        private void tick(object sender, EventArgs e)// close wall for spring
+        {
+            BrickForSpring.Visible = true;
+            BrickForSpring.Location = new Point(537, 0);
+            Trigger.Location = new Point(570,0);
+            EventTickForSpring.Enabled=false;
         }
 
-        private void keyisdown(object sender, KeyEventArgs e)
+        private void keyisdown(object sender, KeyEventArgs e)//key is down reconciliator
         {
             if(e.KeyCode == Keys.Z)
             {
@@ -168,9 +216,13 @@ namespace KursachNewNew
             {
                 gorightUp = true;
             }
+            if(e.KeyCode== Keys.Space)
+            {
+                SpringDown = true;
+            }
         }
 
-        private void keyisup(object sender, KeyEventArgs e)
+        private void keyisup(object sender, KeyEventArgs e)// key is up reconciliator
         {
             if (e.KeyCode == Keys.Z)
             {
@@ -180,6 +232,19 @@ namespace KursachNewNew
             {
                 gorightUp = false;
             }
+            if( e.KeyCode == Keys.Space)
+            {
+                SpringDown = false;
+            }
+            if (e.KeyCode == Keys.Enter && isGameOver ==true)
+            {
+                PlaceBall();
+            }
+            if(e.KeyCode == Keys.R)
+            {
+                PlaceBall();
+            }
         }
+
     }
 }
