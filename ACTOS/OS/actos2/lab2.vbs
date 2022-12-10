@@ -8,11 +8,14 @@ windowsdir = "Windows folder: " & shell.ExpandEnvironmentStrings("%windir%") & v
         "Username: " & network.UserName
 	
              
-MsgBox(windowsdir)
-MsgBox(Wscript.Echo "OS Type: " & objOperatingSystem.OSType)
+Set dtmConvertedDate = CreateObject("WbemScripting.SWbemDateTime")
 strComputer = "."
-Set objWMIService = GetObject("winmgmts:"  & "{impersonationLevel=impersonate}!\\" & strComputer & "\root\cimv2")
+Set objWMIService = GetObject("winmgmts:{impersonationLevel=impersonate}!\\" & strComputer & "\root\cimv2")
+Set oss = objWMIService.ExecQuery ("Select * from Win32_OperatingSystem")
 
+For Each os in oss
+    Wscript.Echo "Caption: " & os.Caption
+Next
 Set colInstalledPrinters = objWMIService.ExecQuery _
     ("Select * from Win32_Printer")
 

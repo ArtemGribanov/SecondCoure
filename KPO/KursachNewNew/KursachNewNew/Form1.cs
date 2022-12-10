@@ -18,6 +18,7 @@ namespace KursachNewNew
         int ballx;
         int bally;
         int playerSpeed;
+        int b = 0;
         int i = 0;
         Random rnd =new Random(); //random function
         public Form1()
@@ -29,6 +30,7 @@ namespace KursachNewNew
 
         private void setupGame()
         {
+
             i = 0;
             score = 0;
             ballx = 0;
@@ -36,20 +38,20 @@ namespace KursachNewNew
             playerSpeed = 12;
             txtScore.Text = "Score: " + score;
             label_Time.Text = "Time:";
-            Trigger.Location = new Point(523, 0);
+            Trigger.Location = new Point(517, 0);
             BrickForSpring.Location = new Point(490, 357);
             timer_Sec.Enabled = false;
             isGameOver = false;
             BrickForSpring.Visible = false;
             gameTimer.Start();
 
-            foreach(Control x in this.Controls) //paint our blocks
-            {
-                if (x is PictureBox && (string)x.Tag == "blocks")
-                {
-                    x.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
-                }
-            }
+            //foreach(Control x in this.Controls) //paint our blocks
+            //{
+            //    if (x is PictureBox && (string)x.Tag == "blocks")
+            //    {
+            //        x.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+            //    }
+            //}
         }
 
         private void gameOver(string message) // game over event
@@ -65,15 +67,15 @@ namespace KursachNewNew
             txtScore.Text = "Score:" + score; // score counter
             if (goleftUp == true) //left player go up
             {
-                while(playerLeft.Top >= 700)
+                while (playerLeft.Top >= 690)
                 {
                     playerLeft.Top--;
                 }
-                    //playerLeft.Top = 700;
+                //playerLeft.Top = 700;
             }
-            if (goleftUp == false ) // left player go down
+            if (goleftUp == false) // left player go down
             {
-                while (playerLeft.Top <= 720)
+                while (playerLeft.Top <= 710)
                 {
                     playerLeft.Top++;
                 }
@@ -81,16 +83,16 @@ namespace KursachNewNew
             }
             if (gorightUp == true) // right player go up
             {
-                playerRight.Top = 700;
+                playerRight.Top = 690;
             }
             if (gorightUp == false) // right player go down
             {
-                playerRight.Top = 720;
+                playerRight.Top = 710;
             }
             ball.Left += ballx;
             ball.Top += bally;
 
-            if (ball.Left < 0 || ball.Left > 562) // bounce with left and right corner
+            if (ball.Left < 52 || ball.Left > 562) // bounce with left and right corner
             {
                 ballx = -ballx;
             }
@@ -141,7 +143,7 @@ namespace KursachNewNew
             foreach (Control x in this.Controls) //bounce for wall
             {
                 if (x is PictureBox && (string)x.Tag == "wall")
-                
+
                 {
                     if (ball.Bounds.IntersectsWith(x.Bounds))
                     {
@@ -149,45 +151,66 @@ namespace KursachNewNew
                     }
                 }
             }
-            
-            if(SpringDown == true)
+            if (ball.Bounds.IntersectsWith(wallforspring.Bounds))
             {
-                Spring.Height = 80;Spring.Top = 675; //stretching the spring
+                ballx = -ballx;//change direction
+            }    
+            if (ball.Bounds.IntersectsWith(BrickForSpring.Bounds))
+            {
+                ballx = -ballx;//change direction
+            }
+            foreach (Control x in this.Controls)// bounce with blocks
+            {
+                if (x is PictureBox && (string)x.Tag == "blocks" | (string)x.Tag == "wall")
+                {
+                    if (ball.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        b += 1;
+
+                        if (b == 10)
+                        {
+                            ballx = -ballx;
+                            b = 0;
+                        }
+                    }
+                }
+            }
+
+            if (SpringDown == true)
+            {
+                Spring.Height = 80; Spring.Top = 675; //stretching the spring
             }
             if (SpringDown == false)
             {
-                Spring.Height = 50; Spring.Top = 698;//contraction the spring
-                
+                Spring.Height = 50; Spring.Top = 700;//contraction the spring
             }
-               
+
             foreach (Control x in this.Controls)// bounce with blocks
             {
-                if (x is PictureBox && (string)x.Tag == "blocks")
+                if (x is PictureBox && (string)x.Tag == "blocks" | (string)x.Tag == "wall")
                 {
                     if (ball.Bounds.IntersectsWith(x.Bounds))
                     {
                         score += 1;
-
                         bally = -bally;
                     }
-
                 }
             }
             if (ball.Bounds.IntersectsWith(Trigger.Bounds)) //trigger for closing wall
             {
-                
                 EventTickForSpring.Enabled = true;
             }
             if (ball.Top > 740)//dead zone
             {
-                gameOver("You Lose");
+                gameOver("You Lose, press enter to play again");
+                Form2 newform = new Form2(score.ToString());
+                newform.Show();
             }
-           
         }
         private void PlaceBall()
         {
-            ball.Left =558;
-            ball.Top =663;
+            ball.Left =551;
+            ball.Top =665;
             setupGame();
         }
         
@@ -200,8 +223,10 @@ namespace KursachNewNew
         private void tick(object sender, EventArgs e)// close wall for spring
         {
             BrickForSpring.Visible = true;
-            BrickForSpring.Location = new Point(537, 0);
-            Trigger.Location = new Point(570,0);
+            BrickForSpring.Location = new Point(529, 0);
+            Trigger.Location = new Point(570, 0);
+            Trigger.Visible = false;
+           
             EventTickForSpring.Enabled=false;
         }
 
@@ -244,7 +269,12 @@ namespace KursachNewNew
             {
                 PlaceBall();
             }
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
 
+        
     }
 }

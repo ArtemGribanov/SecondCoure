@@ -33,3 +33,4 @@ D:\GIT-Repository\SecondCoure\KPO\KursachNewNew\KursachNewNew\obj\Debug\net6.0-w
 D:\GIT-Repository\SecondCoure\KPO\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\KursachNewNew.genruntimeconfig.cache
 D:\GIT-Repository\SecondCoure\KPO\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\ref\KursachNewNew.dll
 D:\GIT-Repository\SecondCoure\KPO\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\KursachNewNew.Properties.Resources.resources
+D:\GIT-Repository\SecondCoure\KPO\KursachNewNew\KursachNewNew\obj\Debug\net6.0-windows\KursachNewNew.Form2.resources
